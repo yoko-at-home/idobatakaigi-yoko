@@ -9,7 +9,10 @@ import MessageSubmitButton from './MessageSubmitButton'
 const useStyles = makeStyles({
   root: {
     gridRow: 2,
-    margin:'26px',
+    margin: '26px',
+    backgroundColor: '#fff',
+    borderRadius: '5px',
+    padding:'1rem',
   },
 })
 

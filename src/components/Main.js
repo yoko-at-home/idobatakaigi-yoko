@@ -9,6 +9,9 @@ const useStyles = makeStyles({
     display: 'grid',
     height: '100vh',
     gridTemplateRows: '1fr auto',
+    background:
+      'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(12,188,194,1) 84%, rgba(0,212,255,1) 100%)',
+    color: '#fff',
   },
 })
 

@@ -13,6 +13,7 @@ import { gravatarPath } from '../gravatar'
 const useStyles = makeStyles(() => ({
   inline: {
     display: 'inline',
+    color: '#fff',
   },
 }))
 
