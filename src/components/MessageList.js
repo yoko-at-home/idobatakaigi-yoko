@@ -20,7 +20,7 @@ const MessageList = () => {
   useEffect(() => {
     messagesRef
       .orderByKey()
-      .limitToLast(30)
+      .limitToLast(3000)
       .on('value', (snapshot) => {
         const messages = snapshot.val()
         if (messages === null) return;
