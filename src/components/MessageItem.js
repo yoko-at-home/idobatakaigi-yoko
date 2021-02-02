@@ -1,4 +1,7 @@
-import React, {useEffect, useRef} from 'react'
+import React, { useEffect, useRef } from 'react'
+import Linkify from 'react-linkify'
+import './MessageItem.styles.css'
+
 import {
   ListItem,
   ListItemText,
@@ -6,9 +9,11 @@ import {
   Avatar,
   Typography,
 } from '@material-ui/core'
+
 import { makeStyles } from '@material-ui/core/styles'
 
 import { gravatarPath } from '../gravatar'
+
 
 const useStyles = makeStyles(() => ({
   inline: {
@@ -41,7 +46,7 @@ const MessageItem = ({ isLastItem, name, text }) => {
             className={classes.inline}
             color='textPrimary'
           >
-            {text}
+            <Linkify>{text}</Linkify>
           </Typography>
         }
       />

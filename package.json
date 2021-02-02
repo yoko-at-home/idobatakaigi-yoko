@@ -11,6 +11,7 @@
     "firebase": "7.23.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-linkify": "^1.0.0-alpha",
     "react-scripts": "3.4.3"
   },
   "scripts": {
