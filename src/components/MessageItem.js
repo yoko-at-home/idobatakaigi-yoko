@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import Linkify from 'react-linkify'
-import './MessageItem.styles.css'
 
 import {
   ListItem,
