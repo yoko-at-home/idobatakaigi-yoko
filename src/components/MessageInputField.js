@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Avatar } from '@material-ui/core'
 
-import {gravatarPath} from '../gravatar'
+import { gravatarPath } from '../gravatar'
 import MessageField from './MessageField'
 import MessageSubmitButton from './MessageSubmitButton'
 
@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     margin: '26px',
     backgroundColor: '#fff',
     borderRadius: '5px',
-    padding:'1rem',
+    padding: '1rem',
   },
 })
 
@@ -49,4 +49,4 @@ const MessageInputField = ({ name }) => {
   )
 }
 
-export default MessageInputField;
+export default MessageInputField
