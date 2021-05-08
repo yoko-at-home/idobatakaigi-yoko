@@ -31,6 +31,12 @@ const MessageItem = ({ isLastItem, name, text }) => {
       ref.current.scrollIntoView({behavior:'smooth'})
     }
   }, [isLastItem])
+  const componentDecorator = (href, text, key) => (
+    <a href={href} key={key} target='_blank' rel='noopener noreferrer'>
+      {text}
+    </a>
+  );
+
   return (
     <ListItem divider={true} ref={ref}>
       <ListItemAvatar>
@@ -45,7 +51,7 @@ const MessageItem = ({ isLastItem, name, text }) => {
             className={classes.inline}
             color='textPrimary'
           >
-            <Linkify>{text}</Linkify>
+            <Linkify componentDecorator={componentDecorator}>{text}</Linkify>
           </Typography>
         }
       />
