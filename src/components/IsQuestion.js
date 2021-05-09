@@ -1,31 +1,34 @@
-import React, { useEffect, useRef } from "react";
-import { Checkbox } from "pretty-checkbox-react";
-import "@djthoms/pretty-checkbox";
+import React from "react";
+import Checkbox from "@material-ui/core/Checkbox";
+import { makeStyles } from "@material-ui/core/styles";
 
-export const IsQuestion = () => {
-  const ref = useRef(null);
+const useStyles = makeStyles({
+  root: {
+    display: "flex",
+    flexDirection: "column",
+    lineHeight: "0.2rem",
+    whiteSpace: "nowrap",
+    padding:0
+  },
+});
 
-  const onSubmit = () => {
-    
-  }
-
-  useEffect(() => {
-    if (ref.current) {
-    }
-  }, []);
+export const IsQuestion = ({IsChecked, setIsChecked}) => {
+    const classes = useStyles();
+    const handleChange = (event) => {
+      setIsChecked(event.target.checked);
+    };
 
   return (
-    <form onSubmit={onSubmit}>
+    <div
+      className={classes.root}
+    >
+      <div style={{ color: "purple", fontSize: "0.7rem" }}>質問する</div>
       <Checkbox
-        bigger
-        hasFocus
-        ref={ref}
-        color="primary-o"
-        style={{ color: "purple", fontWeight: 600 }}
-        state
-      >
-        質問にする
-      </Checkbox>
-    </form>
+        checked={IsChecked}
+        onChange={handleChange}
+        color='purple'
+        inputProps={{ "aria-label": "secondary checkbox" }}
+      />
+    </div>
   );
 };

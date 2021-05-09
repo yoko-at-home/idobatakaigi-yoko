@@ -22,6 +22,7 @@ const MessageInputField = ({ name }) => {
   const [text, setText] = useState('')
   const classes = useStyles()
   const avatarPath = gravatarPath(name)
+  const [IsChecked, setIsChecked]=useState(false)
 
   return (
     <div className={classes.root}>
@@ -38,7 +39,7 @@ const MessageInputField = ({ name }) => {
           />
         </Grid>
         <Grid item xs={1}>
-          <IsQuestion />
+          <IsQuestion IsChecked={IsChecked} setIsChecked={setIsChecked} />
         </Grid>
         <Grid item xs={1}>
           <MessageSubmitButton
@@ -46,7 +47,7 @@ const MessageInputField = ({ name }) => {
             name={name}
             setText={setText}
             text={text}
-            state
+            IsChecked={IsChecked}
           />
         </Grid>
       </Grid>
