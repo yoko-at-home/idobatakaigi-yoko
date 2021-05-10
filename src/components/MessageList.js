@@ -21,13 +21,7 @@ const useStyles = makeStyles({
     overflow: "auto",
     width: "100%",
   },
-  selection: {
-    display: "flex",
-    justifyContent:'space-around',
-    fontWeight: "800",
-    color:  "pink",
-  },
-});
+  });
 
 const MessageList = () => {
   const [messages, setMessages] = useState([]);
@@ -60,16 +54,15 @@ const MessageList = () => {
 
   return (
     <>
-      <div className={classes.selection}>
         <Tabs
           value={value}
           onChange={handleChange}
-          aria-label='simple tabs example'
+        aria-label='simple tabs example'
+        centered
         >
           <Tab label='すべてのメッセージ' {...a11yProps(0)} />
           <Tab label='質問だけ見る' {...a11yProps(1)} />
         </Tabs>
-      </div>
       <List className={classes.root}>
         {messages
           .filter(({ IsChecked }) => IsChecked === true || value === 0)
